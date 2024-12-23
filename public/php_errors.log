@@ -1,0 +1,2 @@
+[23-Dec-2024 08:57:09 UTC] PHP Fatal error:  Access level to App\Filament\Pages\Dashboard::getColumns() must be public (as in class Filament\Pages\Dashboard) in C:\Users\ADMIN\Desktop\all\projects\reube\sepetuka\sepetuka-box-web-filament-admin\app\Filament\Pages\Dashboard.php on line 9
+[23-Dec-2024 09:23:38 UTC] PHP Fatal error:  Cannot make non static method Filament\Pages\Dashboard::getWidgets() static in class App\Filament\Pages\Dashboard in C:\Users\ADMIN\Desktop\all\projects\reube\sepetuka\sepetuka-box-web-filament-admin\app\Filament\Pages\Dashboard.php on line 18
