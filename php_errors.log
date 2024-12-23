@@ -3,3 +3,4 @@
 Stack trace:
 #0 {main}
   thrown in C:\Users\ADMIN\Desktop\all\projects\reube\sepetuka\sepetuka-box-web-filament-admin\artisan on line 9
+[23-Dec-2024 20:25:27 UTC] PHP Fatal error:  Declaration of App\Filament\Resources\VisualsResource\Widgets\Visuals::mount() must be compatible with Filament\Widgets\ChartWidget::mount(): void in C:\Users\ADMIN\Desktop\all\projects\reube\sepetuka\sepetuka-box-web-filament-admin\app\Filament\Resources\VisualsResource\Widgets\Visuals.php on line 24

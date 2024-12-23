@@ -85,5 +85,8 @@ return [
     */
 
     'livewire_loading_delay' => 'default',
+    'brand' => [
+        'favicon' => 'public/favicon.ico', // Provide the URL or path to your favicon
+    ],
 
 ];
