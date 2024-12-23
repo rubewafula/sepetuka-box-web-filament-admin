@@ -9,7 +9,10 @@ use Filament\Resources\Pages\ListRecords;
 class ListCashes extends ListRecords
 {
     protected static string $resource = CashResource::class;
-
+    public function viewAny(): bool
+    {
+        return false;
+    }
     protected function getHeaderActions(): array
     {
         return [

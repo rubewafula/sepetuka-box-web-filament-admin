@@ -16,9 +16,13 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class CashResource extends Resource
 {
     protected static ?string $model = Cash::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        // Example: Only show the menu item for users with 'admin' role
+        return auth()->user()->hasRole('no-show');
+    }
     public static function form(Form $form): Form
     {
         return $form
