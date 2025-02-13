@@ -35,14 +35,16 @@ class TransactionResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created')
+		    ->sortable()
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('profile_id')->searchable(),
                 Tables\Columns\TextColumn::make('amount'),
                 Tables\Columns\TextColumn::make('status'),
                 Tables\Columns\TextColumn::make('transaction_type'),
                 Tables\Columns\TextColumn::make('iscredit'),
-                Tables\Columns\TextColumn::make('created')
-                    ->dateTime(),
-            ])
+	    ])
+	    ->defaultSort('created', 'desc')
             ->filters([
                 //
             ])

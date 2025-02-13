@@ -36,6 +36,7 @@ class SureboxBetSessionResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('start_time')
+		 ->sortable()
                 ->dateTime(),
                 Tables\Columns\TextColumn::make('end_time')
                 ->dateTime(),
@@ -44,7 +45,8 @@ class SureboxBetSessionResource extends Resource
                 Tables\Columns\TextColumn::make('total_winning_bets'),
                 Tables\Columns\TextColumn::make('total_win_amount')->sortable(),
                 Tables\Columns\TextColumn::make('total_lost_amount')->sortable(),
-            ])
+	    ])
+	    ->defaultSort('start_time', 'desc')
             ->filters([
                 //
             ])

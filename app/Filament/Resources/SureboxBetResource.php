@@ -37,14 +37,16 @@ class SureboxBetResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created')
+		    ->sortable()
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('profile_id'),
                 Tables\Columns\TextColumn::make('bet_amount'),
-                Tables\Columns\TextColumn::make('created')
-                    ->dateTime(),
                 Tables\Columns\TextColumn::make('winning_odds'),
                 Tables\Columns\TextColumn::make('possible_win'),
                 Tables\Columns\TextColumn::make('won'),
             ])
+	    ->defaultSort('created', 'desc')
             ->filters([
                 //
             ])

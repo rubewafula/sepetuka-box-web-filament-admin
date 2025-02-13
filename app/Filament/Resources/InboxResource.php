@@ -35,13 +35,15 @@ class InboxResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created')
+		     ->sortable()
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('msisdn')->searchable(),
                 Tables\Columns\TextColumn::make('shortcode')->searchable(),
                 Tables\Columns\TextColumn::make('network')->sortable(),
                 Tables\Columns\TextColumn::make('message')->searchable(),
-                Tables\Columns\TextColumn::make('created')
-                    ->dateTime(),
-            ])
+	    ])
+	    ->defaultSort('created', 'desc')
             ->filters([
                 //
             ])

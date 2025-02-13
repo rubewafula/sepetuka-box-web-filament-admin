@@ -35,10 +35,12 @@ class SureboxClientBetSessionResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('profile_id')->searchable(),
                 Tables\Columns\TextColumn::make('created')
+		->sortable()
                 ->dateTime(),
-            ])
+                Tables\Columns\TextColumn::make('profile_id')->searchable(),
+	    ])
+	    ->defaultSort('created', 'desc')
             ->filters([
                 //
             ])

@@ -34,12 +34,14 @@ class DepositResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created')
+		     ->sortable()
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('msisdn')->searchable(),
                 Tables\Columns\TextColumn::make('amount'),
                 Tables\Columns\TextColumn::make('status')->sortable(),
-                Tables\Columns\TextColumn::make('created')
-                    ->dateTime(),
             ])
+	    ->defaultSort('created', 'desc')
             ->filters([
                 //
             ])

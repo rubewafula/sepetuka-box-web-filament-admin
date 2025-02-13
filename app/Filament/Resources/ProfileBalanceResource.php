@@ -35,14 +35,15 @@ class ProfileBalanceResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created')
+                    ->dateTime()->searchable(),
+                Tables\Columns\TextColumn::make('modified')
+                    ->dateTime()->sortable(),
                 Tables\Columns\TextColumn::make('profile_id')->searchable(),
                 Tables\Columns\TextColumn::make('balance')->sortable(),
                 Tables\Columns\TextColumn::make('total_deposits')->sortable(),
-                Tables\Columns\TextColumn::make('modified')
-                    ->dateTime()->sortable(),
-                Tables\Columns\TextColumn::make('date_created')
-                    ->dateTime()->searchable(),
             ])
+	    ->defaultSort('modified', 'desc')
             ->filters([
                 //
             ])
